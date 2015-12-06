@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "世田谷区予約システムログイン",
+    "description": "",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://www.keyakinet.jp/reselve/k_LoginInitial.do"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs", "https://www.keyakinet.jp/*"
+    ],
+    "browser_action": {
+        "name": "net member notification"
+    },
+    "options_page": "option.html"
+}
